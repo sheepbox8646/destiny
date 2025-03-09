@@ -27,7 +27,7 @@ export default function Navbar({ user }: NavbarProps) {
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
               <Link href="/" className="text-xl font-bold">
-                Destiny
+                贴贴 · Sticky
               </Link>
             </div>
           </div>
