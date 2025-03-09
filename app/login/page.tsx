@@ -7,6 +7,7 @@ import { useEffect } from 'react'
 import SignUpForm from '@/components/SignUpForm'
 import { FiMail, FiPhone, FiLock } from 'react-icons/fi'
 import { FcGoogle } from 'react-icons/fc'
+import { config } from '@/lib/config'
 
 type LoginMethod = 'email' | 'phone'
 
@@ -67,7 +68,7 @@ export default function Login() {
       const { data, error } = await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: {
-          redirectTo: `${window.location.origin}/`
+          redirectTo: config.baseUrl
         }
       })
       if (error) throw error
